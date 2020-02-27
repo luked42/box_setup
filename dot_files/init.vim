@@ -24,6 +24,7 @@ set signcolumn=yes
 call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
