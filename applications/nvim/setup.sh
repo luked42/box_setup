@@ -16,7 +16,10 @@ wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
 
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
-cp ./squashfs-root/usr/bin/nvim ${PREFIX_DIR}/bin/.
+for dir in bin man share; do
+	mkdir -p ${PREFIX_DIR}/${dir}
+	cp -r ./squashfs-root/usr/${dir}/* ${PREFIX_DIR}/${dir}/.
+done
 
 popd
 

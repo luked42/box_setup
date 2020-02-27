@@ -7,4 +7,5 @@ for dot_file in .bashrc .tmux.conf; do
 	cp ${BASE_DIR}/${dot_file} ${HOME}/.
 done
 
+mkdir -p ${HOME}/.config/nvim
 cp ${BASE_DIR}/init.vim ${HOME}/.config/nvim/.
