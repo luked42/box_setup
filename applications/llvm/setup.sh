@@ -21,8 +21,8 @@ mkdir -p ${LLVM_DIR}
 
 pushd ${LLVM_DIR}
 
-cmake -DCMAKE_BUILD_TYPE=Release ${WORKING_DIR}/llvm-project/llvm
-cmake --build .
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=${PREFIX_DIR} ${WORKING_DIR}/llvm-project/llvm
+cmake --build . --target install
 
 popd
 
