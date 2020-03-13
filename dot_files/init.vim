@@ -32,10 +32,19 @@ inoremap <silent><expr> <Tab>
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
+set list
+
+set number
+set relativenumber
+
+" File styling
+set tabstop=4
+
 call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sjl/badwolf'
 
 call plug#end()
 
@@ -43,3 +52,6 @@ call plug#end()
 " FZF
 nnoremap <leader>ff :FZF<CR>
 
+" Set Colorscheme. Must be done after Plugs
+colorscheme badwolf
+let g:badwolf_darkgutter = 1

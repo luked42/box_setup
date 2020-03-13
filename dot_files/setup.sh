@@ -9,3 +9,4 @@ done
 
 mkdir -p ${HOME}/.config/nvim
 cp ${BASE_DIR}/init.vim ${HOME}/.config/nvim/.
+cp ${BASE_DIR}/coc-settings.json ${HOME}/.config/nvim/.
