@@ -14,7 +14,7 @@ pushd ${WORKING_DIR}
 git clone --depth=1 --recursive https://github.com/MaskRay/ccls
 
 pushd ccls
-cmake -H. -BRelease -DCMAKE_CXX_FLAGS=-D__STDC_FORMAT_MACROS -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=${PREFIX_DIR} -DCMAKE_PREFIX_PATH=${PREFIX_PATH}
+cmake -H. -BRelease -DCMAKE_CXX_FLAGS=-D__STDC_FORMAT_MACROS -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=${PREFIX_DIR} -DCMAKE_INSTALL_PREFIX=${PREFIX_DIR}
 cmake --build Release --target install
 
 
