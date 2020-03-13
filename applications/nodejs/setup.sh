@@ -5,25 +5,22 @@ if [[ -z $PREFIX_DIR ]]; then
 	PREFIX_DIR="${HOME}/.local"
 fi
 
-BASE_DIR=$(dirname ${0})
+BASE_DIR=$(dirname $(realpath ${0}))
 WORKING_DIR=${BASE_DIR}/working
-# FROM https://nodejs.org/download/release/v13.0.0/node-v13.0.0.tar.gz
-NODE_VERSION='13.0.0'
+# FROM https://nodejs.org/download/release/
+NODE_NAME='node-v13.0.0-linux-x64'
 
-mkdir ${WORKING_DIR}
+mkdir -p ${WORKING_DIR}
 
-tar -xf node-v${NODE_VERSION}.tar.gz -C ${WORKING_DIR}/.
+tar -xf ${BASE_DIR}/${NODE_NAME}.tar.xz -C ${WORKING_DIR}/.
+
 pushd ${WORKING_DIR}
 
+for folder in bin include lib share; do
+	mkdir -p ${PREFIX_DIR}/${folder}
+	cp -r ${WORKING_DIR}/${NODE_NAME}/${folder}/* ${PREFIX_DIR}/${folder}/.
+done
 
-pushd node-v${NODE_VERSION}
-
-export LDFLAGS='-lrt'
-./configure --prefix=${PREFIX_DIR}
-
-make && make install
-
-popd
 
 popd
 
