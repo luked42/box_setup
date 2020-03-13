@@ -45,6 +45,7 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sjl/badwolf'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -53,5 +54,4 @@ call plug#end()
 nnoremap <leader>ff :FZF<CR>
 
 " Set Colorscheme. Must be done after Plugs
-colorscheme badwolf
-let g:badwolf_darkgutter = 1
+colorscheme gruvbox
