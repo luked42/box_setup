@@ -12,7 +12,7 @@ NODE_NAME='node-v13.0.0-linux-x64'
 
 mkdir -p ${WORKING_DIR}
 
-tar -xf ${BASE_DIR}/${NODE_NAME}.tar.xz -C ${WORKING_DIR}/.
+tar -xf ${BASE_DIR}/${NODE_NAME}.tar.gz -C ${WORKING_DIR}/.
 
 pushd ${WORKING_DIR}
 
