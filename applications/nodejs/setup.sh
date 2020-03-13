@@ -18,6 +18,7 @@ pushd ${WORKING_DIR}
 
 pushd node-v${NODE_VERSION}
 
+export LDFLAGS='-lrt'
 ./configure --prefix=${PREFIX_DIR}
 
 make && make install
