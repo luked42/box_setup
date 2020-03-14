@@ -1,8 +1,9 @@
+noremap <Space> <Nop>
 let mapleader = "\<Space>"
 
 let $VIMRUNTIME='${HOME}/.local/share/nvim/runtime'
 
-imap jj <Esc>
+inoremap jj <Esc>
 
 " Configure netrw explorer style
 let g:netrw_banner = 0
@@ -27,6 +28,12 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
@@ -53,11 +60,19 @@ nnoremap <leader>ff :FZF<CR>
 " Set Colorscheme. Must be done after Plugs
 colorscheme gruvbox
 
+set incsearch
+set ignorecase
+set smartcase
+
 set cursorline
 highlight CursorLine  ctermbg=234
 
 set colorcolumn=120
 highlight ColorColumn ctermbg=52
+
+highlight CocHighlightText ctermbg=244
+
+set statusline=%f\ \-\ %y%=%l:%c/%L
 
 augroup file_formatting
 	autocmd!
