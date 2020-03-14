@@ -50,6 +50,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
+Plug 'rking/ag.vim'
 
 call plug#end()
 
