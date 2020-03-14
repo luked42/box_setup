@@ -1,11 +1,11 @@
 # PS1 PROMPT
-ORANGE="\033[48;5;234;38;5;208m"
-YELLOW="\033[48;5;234;38;5;228m"
-BLUE="\033[48;5;234;38;5;66m"
+ORANGE="\[\033[48;5;234;38;5;208m\]"
+YELLOW="\[\033[48;5;234;38;5;228m\]"
+BLUE="\[\033[48;5;234;38;5;66m\]"
 BRIGHT_RED="\033[48;5;234;38;5;160m"
 BRIGHT_YELLOW="\033[48;5;234;38;5;226m"
 BRIGHT_GREEN="\033[48;5;234;38;5;34m"
-RESET="\033[0m"
+RESET="\[\033[0m\]"
 
 ps1_git_color() {
 	local git_status="$(git status 2> /dev/null)"
