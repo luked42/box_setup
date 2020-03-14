@@ -47,10 +47,10 @@ ps1_git() {
 }
 
 build_ps1() {
-	PS1="\n"
-	PS1+="${BLUE}╔════┥ ${ORANGE}$(ps1_host)${BLUE}$(ps1_spacer)${YELLOW}\$(ps1_working_dir)${BLUE}\$(ps1_git)"
-	PS1+="\n${BLUE}╚═╡ ${RESET}"
-	echo -e ${PS1}
+	local result="\n"
+	result+="${BLUE}╔════┥ ${ORANGE}$(ps1_host)${BLUE}$(ps1_spacer)${YELLOW}\$(ps1_working_dir)${BLUE}\$(ps1_git)"
+	result+="\n${BLUE}╚═╡ ${RESET}"
+	echo -e ${result}
 }
 
 export PREFIX_DIR=${HOME}/.local
