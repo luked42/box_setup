@@ -58,6 +58,8 @@ call plug#end()
 " FZF
 nnoremap <leader>ff :FZF<CR>
 
+nnoremap <leader>ag :Ag<Space>
+
 " Set Colorscheme. Must be done after Plugs
 colorscheme gruvbox
 
