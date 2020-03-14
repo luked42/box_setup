@@ -61,6 +61,5 @@ highlight ColorColumn ctermbg=52
 
 augroup file_formatting
 	autocmd!
-	autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 noexpandtab
-	autocmd FileType vim,sh setlocal tabstop=4 shiftwidth=4 noexpandtab
+	autocmd FileType cpp,vim,sh,make,cmake setlocal tabstop=4 shiftwidth=4 noexpandtab
 augroup END
