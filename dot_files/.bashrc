@@ -34,7 +34,9 @@ ps1_host() {
 }
 
 ps1_spacer() {
-	echo -e ' ┝┥ '
+	#echo -e ' ┝┥ '
+	#echo -e ' ◆ '
+	echo -e ' 🞛 '
 }
 
 ps1_git() {
