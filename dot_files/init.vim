@@ -1,4 +1,4 @@
-:let mapleader = "\<Space>"
+let mapleader = "\<Space>"
 
 let $VIMRUNTIME='${HOME}/.local/share/nvim/runtime'
 
@@ -37,9 +37,6 @@ set list
 set number
 set relativenumber
 
-" File styling
-set tabstop=4
-
 call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -55,3 +52,15 @@ nnoremap <leader>ff :FZF<CR>
 
 " Set Colorscheme. Must be done after Plugs
 colorscheme gruvbox
+
+set cursorline
+highlight CursorLine  ctermbg=234
+
+set colorcolumn=120
+highlight ColorColumn ctermbg=52
+
+augroup file_formatting
+	autocmd!
+	autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 noexpandtab
+	autocmd FileType vim,sh setlocal tabstop=4 shiftwidth=4 noexpandtab
+augroup END
