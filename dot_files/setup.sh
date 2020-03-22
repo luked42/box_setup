@@ -8,7 +8,7 @@ fi
 BASE_DIR=$(dirname ${0})
 
 # copy to home directory
-for dot_file in .bashrc .tmux.conf; do
+for dot_file in .bashrc .tmux.conf .clang-format; do
 	cp ${BASE_DIR}/${dot_file} ${HOME}/.
 done
 
