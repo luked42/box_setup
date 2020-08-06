@@ -7,3 +7,4 @@ sudo yum install -y gcc
 sudo yum install -y automake
 
 sudo yum install -y bison
+sudo yum install -y byacc
