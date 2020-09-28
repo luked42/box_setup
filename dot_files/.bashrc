@@ -59,12 +59,32 @@ export PREFIX_DIR=${HOME}/.local
 export PATH=${PREFIX_DIR}/bin:$PATH
 export LD_LIBRARY_PATH=${PREFIX_DIR}/lib
 
-if [[ -f /opt/rh/devtoolset-7/enable ]]; then
-	source /opt/rh/devtoolset-7/enable
+if [[ -f /opt/rh/devtoolset-8/enable ]]; then
+	source /opt/rh/devtoolset-8/enable
 fi
 
 if [[ -f ${HOME}/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh ]]; then
 	source ${HOME}/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
 fi
 
+if [[ $(hostname) -eq 'opamux1090' ]]; then
+  export http_proxy="http://opamwsp-static.comp.optiver.com:8080"
+  export https_proxy="http://opamwsp-static.comp.optiver.com:8080"
+fi
+
 PS1=$(build_ps1)
+
+export LS_COLORS='di=94';
+
+## Aliases
+
+# Navigation
+alias cr="cd ~/development/cr"
+alias ir="cd ~/development/internal_retreat"
+alias mr="cd ~/development/mr"
+alias stet="cd ~/development/systematic_trading_execution_tool"
+alias vpg="cd ~/development/srv_vpg"
+alias vspp="cd ~/development/volsurfacepp"
+
+# cmake
+alias cma="cmake -GNinja -DCMAKE_BUILD_TYPE=Debug -DEXPORT_CMAKE_COMPILE_COMMANDS=true .."
