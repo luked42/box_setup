@@ -81,6 +81,7 @@ export LS_COLORS='di=94';
 # Navigation
 alias cr="cd ~/development/cr"
 alias ir="cd ~/development/internal_retreat"
+alias genv="cd ~/environments"
 alias mr="cd ~/development/mr"
 alias stet="cd ~/development/systematic_trading_execution_tool"
 alias vpg="cd ~/development/srv_vpg"
