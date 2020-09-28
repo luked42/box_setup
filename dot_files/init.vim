@@ -80,6 +80,7 @@ set statusline=%f\ \-\ %y%=%l:%c/%L
 augroup file_formatting
 	autocmd!
 	autocmd FileType cpp,vim,sh,make,cmake setlocal tabstop=4 shiftwidth=4 noexpandtab
+	autocmd FileType xml setlocal tabstop=2 shiftwidth=2 expandtab
 augroup END
 
 set autoindent
