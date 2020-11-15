@@ -19,7 +19,7 @@ cmake --build Release --target install
 
 
 # Copy the ccls binary to the prefix path
-cp Release/bin/ccls ${PREFIX_DIR}/bin
+cp Release/ccls ${PREFIX_DIR}/bin
 popd
 
 if [[ -n ${WORKING_DIR} ]]; then
