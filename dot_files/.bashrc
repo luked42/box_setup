@@ -80,3 +80,13 @@ export LS_COLORS='di=94';
 
 # cmake
 alias cma="cmake -GNinja -DCMAKE_BUILD_TYPE=Debug -DEXPORT_CMAKE_COMPILE_COMMANDS=true .."
+
+shopt -s dotglob
+
+for dot_file in ${HOME}/.config/extra_dots/*; do
+  if [[ -f ${dot_file} ]]; then
+    source ${dot_file}
+  fi
+done;
+
+shopt -u dotglob
