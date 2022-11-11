@@ -67,11 +67,6 @@ if [[ -f ${HOME}/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh ]]; then
 	source ${HOME}/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
 fi
 
-if [[ $(hostname) -eq 'opamux1090' ]]; then
-  export http_proxy="http://opamwsp-static.comp.optiver.com:8080"
-  export https_proxy="http://opamwsp-static.comp.optiver.com:8080"
-fi
-
 PS1=$(build_ps1)
 
 export LS_COLORS='di=94';
