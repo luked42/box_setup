@@ -51,9 +51,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
 Plug 'rking/ag.vim'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
+" EasyMotion
+map <Leader> <Plug>(easymotion-prefix)
 
 " FZF
 nnoremap <leader>ff :FZF<CR>
