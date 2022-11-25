@@ -95,3 +95,6 @@ set cino+=,g0    " Set scope declartion incline with brace
 set cino+=,N-s   " No indent inside namespace
 set cino+=,E-s   " No indent inside C-Extern
 set cino+=+8     " Continuation lines indent
+
+" Don't create swap files
+set noswapfile 
